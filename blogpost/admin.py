@@ -18,7 +18,7 @@ class ContentAdmin(admin.ModelAdmin):
 	fields = ('text')
 
 class AuthorAdmin(admin.ModelAdmin):
-	fields = ('name', 'avatar')
+	fields = ('name')
 
 class PostAdmin(admin.ModelAdmin):
 	fields = ('content','asset', 'title', 'post_like', 'date', 'tags', 'author')

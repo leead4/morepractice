@@ -17,7 +17,7 @@ urlpatterns = [
     url(r'^projects$', blogpost.views.projects, name='projects'),
     url(r'^filter_blog_by_topic/(?P<topic_type>.+?)$', blogpost.views.filter_blog_by_topic, name='filter_blog_by_topic'),
     url(r'^post/(?P<blog_id>.+?)$', blogpost.views.get_this_post, name='get_this_post'),
-    url(r'^admin/', admin.site.urls)
+    url(r'^catsaregreat/', admin.site.urls)
     ] 
 
 
