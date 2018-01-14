@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	{%include "styles.html"%}
+	<title>Blogazon</title>
+</head>
+<body>
+{%include "navbar.html"%}
+<div class="container-fluid main">
+	{%include "sidenav.html"%}
+	<div class="row">
+		<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<h3 class="text-center">{{post.title}}</h3>
+				<div class="flex-container">
+					<h5 class="flex-items">{{post.date}}</h5>
+				</div>
+				<div class="box"></div>
+					<img src="{{post.asset.image.url}}" class="img-responsive">	
+					<p class="lead">{{post.content.text}}</p>
+			</div>
+		<div class="col-md-2"></div>
+		</div> 
+	</div>
+	{%include "scripts.html"%}
+</body>
+</html>
