@@ -1,0 +1,268 @@
+body{
+	padding-top: 70px; 
+  font-family: 'Open Sans', sans-serif;
+}
+
+input[type=text]:focus {
+  border-color: rgba(85,239,203,1);
+  box-shadow: rgba(30,87,153,1);
+}
+
+
+
+.input_style{
+  border: 3px solid #26FFCD; 
+}
+
+.fa {
+  color: rgba(85,239,203,1);
+  color: #55FFFF;
+  font-size: 2.5em;
+}
+
+
+.post {
+  display: block;
+  padding: 5%;
+  color: #fff;
+}
+
+.panel {
+  border: 3px;
+  padding: 2.5%;
+}
+
+.panel-body {
+  background-color: #fff;
+  color: #6c8bfa;
+  border-left: solid 10px #FED3D0;
+}
+
+.panel-head {
+  font-size: 10em !important;
+  font-style: underline;
+  font-family: 'Open Sans', sans-serif;
+}
+.panel-head > h5 {
+  padding: 2.5%;
+  color: #FFF !important;
+
+}
+
+.panel-head > h1  > a {
+  padding: 2.5%;
+  color: #FFF !important;
+}
+
+.panel-head > h1 > a:hover {
+  color: #FED3D0 !important;
+}
+
+
+/*navabar styling*/
+nav .navbar, .navbar-default, .navbar-fixed-top, .transparent, .navtown, footer {
+    background-color: rgba(0,0,0,0); 
+    height: 60px;
+    border-bottom: 0px;
+    text-align: center;
+    transition: background-color .5s ease 0s;
+}
+
+.navbar-default .navbar-nav>li>a {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  color:#26FFCD !important;
+}
+
+.nav, .jumbotron {
+  border: 3px solid transparent;
+  -moz-border-image: -moz-linear-gradient(top, #3acfd5 0%, #26FFCD 100%);
+  -webkit-border-image: -webkit-linear-gradient(top, #3acfd5 0%, #26FFCD 100%);
+  border-image: linear-gradient(to bottom, #3acfd5 0%, #26FFCD 100%);
+  border-image-slice: 1;
+}
+
+
+
+
+
+
+/*.item, .active*/
+.asymmetric {
+  position: relative;
+  background-color: rgba(85,239,203,1);
+}
+
+.asymmetric h4 {
+  text-transform: lowercase;
+  color: #fff;
+  font-size: 5em;
+}
+
+/*.item, .active*/
+.asymmetric::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(85,239,203,1);
+  transform-origin: top right;
+  transform: skewY(-5deg);
+  z-index: -10;
+}
+
+/*.item, .active*/
+.asymmetric::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(85,239,203,1);
+  transform-origin: bottom right;
+  transform: skewY(3deg);
+  z-index: -10;
+}
+
+
+article.asymmetric {
+  padding: 5%;
+  color: #fff;
+  height: 800px;
+}
+
+article.asymmetric::before {
+  transform-origin: top left;
+}
+
+article.asymmetric::after {
+  transform-origin: bottom left;
+}
+
+article.asymmetric h5 {
+ color: #fff;
+ font-size: 5em;
+}
+
+article.asymmetric p {
+ color: #fff;
+ font-size: 2em; 
+ padding: 5%;
+}
+
+.blank-space {
+  height: 200px;
+}
+
+
+.center, footer div.row ul li {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+
+
+/* The side navigation menu */
+#open {
+  font-size: 25px;
+  color: rgba(85,239,203,1)!important; 
+}
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #ACFCEA; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #6c8bfa;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f4c048;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+
+.lead {
+  text-align: justify;
+  margin-top: 5%;
+}
+
+.flex-items {
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+}
+
+.pretty, .panel,.asymmetric,.asymmetric::before,
+.asymmetric::after {
+  /*opacity: .5;*/
+  background: linear-gradient(140deg, #4ce1bb, #6c8bfa, #f4c048);
+  background-size: 600% 600%;
+
+-webkit-animation: AnimationName 30s ease infinite;
+-moz-animation: AnimationName 30s ease infinite;
+animation: AnimationName 30s ease infinite;
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
+}
+
+
+
