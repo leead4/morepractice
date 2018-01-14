@@ -20,7 +20,6 @@ class Content(models.Model):
 
 class Author(models.Model):
     name = models.CharField(max_length =50)
-    avatar = models.ForeignKey(Asset)
 
     def __str__(self):
         return self.name
@@ -30,14 +29,13 @@ class Post(models.Model):
     Code = 'Code'
     Design = 'Design'
     choices = ((Cats, "Cats"), (Code, "Code"), (Design, "Design"))
-
-    content = models.ForeignKey(Content)
-    asset = models.ForeignKey(Asset)
+    content = models.ForeignKey(Content, on_delete=models.CASCADE)
+    asset = models.ForeignKey(Asset, on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
     post_like = models.IntegerField()
     date = models.DateField()
     tags = models.CharField(max_length=15,choices=choices,default=Code,)
-    post_author = models.ForeignKey(Author)
+    post_author = models.ForeignKey(Author, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title
