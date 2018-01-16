@@ -1,6 +1,8 @@
 from django.conf.urls import include, url
 from django.conf.urls import url, include
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 
 from django.contrib import admin
 admin.autodiscover()
@@ -18,7 +20,7 @@ urlpatterns = [
     url(r'^filter_blog_by_topic/(?P<topic_type>.+?)$', blogpost.views.filter_blog_by_topic, name='filter_blog_by_topic'),
     url(r'^post/(?P<blog_id>.+?)$', blogpost.views.get_this_post, name='get_this_post'),
     url(r'^catsaregreat/', admin.site.urls)
-    ] 
+    ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
 

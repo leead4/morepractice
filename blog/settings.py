@@ -132,11 +132,12 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-# STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATIC_HOST = 'https://d26s1c2i1ksrh3.cloudfront.net' if not DEBUG else ''
 STATIC_URL = STATIC_HOST + '/static/'
+
 
 
 django_heroku.settings(locals())
